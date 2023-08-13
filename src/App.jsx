@@ -10,11 +10,9 @@ function App() {
   const [currentLocation, setCurrentLocation] = useState(null)
 
   const handleSubmit = (e) => {
-
     e.preventDefault();
-    const newLocation = e.target.newLocation.value;
+    const newLocation = e.target.newLocation.value
     fetchDimension(newLocation)
-
   }
 
   const fetchDimension = (url) => {
@@ -39,7 +37,7 @@ function App() {
     <>
     <LocationForm handleSubmit={handleSubmit}/>
     <LocationInfo currentLocation={currentLocation}/>
-    <ResidentList residents = {currentLocation?.residents ?? []}/>      
+    <ResidentList residents = {currentLocation?.residents ?? []} currentLocation={currentLocation}/>      
     </>
   )
 }

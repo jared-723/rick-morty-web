@@ -1,9 +1,12 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import ResidentCard from "./ResidentCard"
+import { Pagination } from "./Pagination";
 
-const ResidentList = ({residents}) => {
+const INITIAL_PAGE = 1;
 
-    const [currentPage, setCurrentPage] = useState(1)
+const ResidentList = ({residents, currentLocation}) => {
+
+    const [currentPage, setCurrentPage] = useState(INITIAL_PAGE)
 
     const RESIDENTS_PER_PAGE = 20;
 
@@ -20,15 +23,20 @@ const ResidentList = ({residents}) => {
         pages.push[i]
     }
 
+    useEffect(()=> {
+        setCurrentPage(INITIAL_PAGE)
+    }, [currentLocation])
+
     return (
         <section>
             <section>
             {
-                residents.map((resident) => 
+                residentsInPage.map((resident) => 
                 <ResidentCard key={resident} residentUrl={resident}/> )
             }
             </section>
 
+            <Pagination pages={pages} setCurrentPage={setCurrentPage} currentPage={currentPage} />
         </section>
 
     )
