@@ -1,5 +1,6 @@
 
 export const Pagination = ({pages, setCurrentPage, currentPage}) => {
+    console.log(pages)
     return (
         <ul>
             {pages.map((page)=> (

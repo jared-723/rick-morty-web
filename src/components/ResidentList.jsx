@@ -20,7 +20,7 @@ const ResidentList = ({residents, currentLocation}) => {
     const pages = []
 
     for(let i = 1; i <= totalPages; i++){
-        pages.push[i]
+        pages.push(i)
     }
 
     useEffect(()=> {

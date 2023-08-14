@@ -34,11 +34,14 @@ function App() {
   }, [])
 
   return (
-    <>
-    <LocationForm handleSubmit={handleSubmit}/>
-    <LocationInfo currentLocation={currentLocation}/>
-    <ResidentList residents = {currentLocation?.residents ?? []} currentLocation={currentLocation}/>      
-    </>
+    <main className='bg-[url(/imgSrc/bg.png)] w-screen bg-contain bg-center flex flex-col items-center pt-[4rem] gap-4'>
+      <div className='w-[70%]'>
+        <img src="/imgSrc/titleRickMorty.png" alt="" />
+      </div>
+      <LocationForm handleSubmit={handleSubmit}/>
+      <LocationInfo currentLocation={currentLocation}/>
+      <ResidentList residents = {currentLocation?.residents ?? []} currentLocation={currentLocation}/>      
+    </main>
   )
 }
 
