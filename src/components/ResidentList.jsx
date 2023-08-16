@@ -28,8 +28,8 @@ const ResidentList = ({residents, currentLocation}) => {
     }, [currentLocation])
 
     return (
-        <section>
-            <section>
+        <section className="flex flex-col gap-4">
+            <section className="flex justify-center flex-wrap gap-6">
             {
                 residentsInPage.map((resident) => 
                 <ResidentCard key={resident} residentUrl={resident}/> )

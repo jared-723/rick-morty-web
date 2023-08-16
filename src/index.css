@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+    --principalColor: rgba(137, 52, 70, 1);
+    --bgName:rgba(237, 226, 136, 1);
+    --bgPrincipalCard: rgba(133, 104, 136, 1);
+    --bgSubCard:rgba(201, 190, 220, 1);
+    --bgButton: rgb(254,239,102);
+}

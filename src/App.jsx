@@ -34,14 +34,11 @@ function App() {
   }, [])
 
   return (
-    <main className='bg-[url(/imgSrc/bg.png)] w-screen bg-contain bg-center flex flex-col items-center pt-[4rem] gap-4'>
-      <div className='w-[70%]'>
-        <img src="/imgSrc/titleRickMorty.png" alt="" />
-      </div>
-      <LocationForm handleSubmit={handleSubmit}/>
-      <LocationInfo currentLocation={currentLocation}/>
-      <ResidentList residents = {currentLocation?.residents ?? []} currentLocation={currentLocation}/>      
-    </main>
+    <section className='bg-[url(/imgSrc/bg.png)] max-w-screen bg-contain bg-center flex flex-col items-center pt-[3rem] gap-4'>
+        <LocationForm handleSubmit={handleSubmit}/>
+        <LocationInfo currentLocation={currentLocation}/>
+        <ResidentList residents = {currentLocation?.residents ?? []} currentLocation={currentLocation}/>    
+    </section>
   )
 }
 

@@ -1,6 +1,6 @@
 const LocationInfo = ({currentLocation}) => {
     return (
-        <section>
+        <section className="bg-[var(--bgName)]">
             <h2>{currentLocation?.name}</h2>
             <ul>
                 <li>Type: {currentLocation?.type}</li>
