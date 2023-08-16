@@ -26,7 +26,7 @@ const ResidentCard = ({residentUrl}) => {
             <img src={resident?.image} alt="" />
             <div className={`absolute h-[150px] w-[150px] top-0 ${residentStatus[resident?.status]} 
             grid place-content-center text-[10px] ${isStatus ? "visible" : "invisible"} sm:w-[200px] sm:h-[200px]`}>
-                <span className="font-bold text-white bg-slate-700 bg-opacity-50 rounded-full p-1 px-3 text-[20px] sm:text-[15px] ">{resident?.status}</span>
+                <span className="font-bold text-white bg-slate-700 bg-opacity-50 rounded-full p-1 px-3 text-[20px] lg:text-[30px] ">{resident?.status}</span>
             </div>
         </header>
         <section className="w-full bg-[var(--bgPrincipalCard)] rounded-3xl border-solid border-[var(--principalColor)] border-8 relative text-white">
