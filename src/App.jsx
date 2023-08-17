@@ -34,7 +34,8 @@ function App() {
   }, [])
 
   return (
-    <section className='max-w-screen bg-black flex flex-col items-center pt-[3rem] gap-4 relative z-0'>
+    <section className='min-h-[1200px] max-w-screen md:min-h-[1500px] 
+    xl:min-h-[2000px] bg-black flex flex-col items-center pt-[3rem] gap-8 relative z-0'>
       <div className='w-full absolute top-0 left-0 z-10'>
         <img src="/imgSrc/bgTop.png" alt="" />
       </div>

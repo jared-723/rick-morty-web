@@ -1,4 +1,5 @@
 const LocationInfo = ({currentLocation}) => {
+    console.log(currentLocation)
     return (
         <section className="grid place-content-center px-8 py-4 rounded-xl
         bg-[var(--bgName)] text-[var(--principalColor)]
