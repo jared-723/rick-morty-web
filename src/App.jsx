@@ -34,10 +34,18 @@ function App() {
   }, [])
 
   return (
-    <section className='bg-[url(/imgSrc/bg.png)] max-w-screen bg-contain bg-center flex flex-col items-center pt-[3rem] gap-4'>
+    <section className='max-w-screen bg-black flex flex-col items-center pt-[3rem] gap-4 relative z-0'>
+      <div className='w-full absolute top-0 left-0 z-10'>
+        <img src="/imgSrc/bgTop.png" alt="" />
+      </div>
+      <main className='w-full flex flex-col items-center pt-[3rem] gap-4 z-20'>
         <LocationForm handleSubmit={handleSubmit}/>
         <LocationInfo currentLocation={currentLocation}/>
-        <ResidentList residents = {currentLocation?.residents ?? []} currentLocation={currentLocation}/>    
+        <ResidentList residents = {currentLocation?.residents ?? []} currentLocation={currentLocation}/>
+      </main>
+      <div className='w-full absolute bottom-0 left-0 z-10'>
+        <img src="/imgSrc/bgBottom.png" alt="" />
+      </div>    
     </section>
   )
 }
